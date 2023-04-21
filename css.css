@@ -30,7 +30,7 @@ html {
 #Loaderbuttons {
     width:60%;
     margin:10px auto 5px;
-    display: inline-grid;
+    display: contents;
     text-align: center;
 
     left: auto;
@@ -45,7 +45,6 @@ html {
     text-align: center;
     font-size: 14px;
     padding: 8px 16px;
-    display:block;
 background-color: #3498db;
 border-color: #3498db;
   color: #fff;
