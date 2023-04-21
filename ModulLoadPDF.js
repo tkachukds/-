@@ -2,7 +2,7 @@ function modulLoadPDF(url){
 
     let htmlcanvasPDF = ''+
         '<button id="show-pdf-button" style="display: none;">Show PDF</button>'+
-        '<div id="pdf-main-container">'+
+        '<div id="pdf-main-container" width="100%">'+
         '<div id="pdf-loader">Loading document ...</div>'+
         '<div id="pdf-contents">'+
         '<div id="pdf-meta">'+
@@ -49,7 +49,8 @@ function modulLoadPDF(url){
     
         // show the first page
         showPage(1);
-    }
+        document.querySelector("#pdf-main-container").style.width = '100%';
+    } 
     
     // load and render specific page of the PDF
     async function showPage(page_no) {
@@ -79,7 +80,7 @@ function modulLoadPDF(url){
         var pdf_original_width = page.getViewport(1).width;
         
         // as the canvas is of a fixed width we need to adjust the scale of the viewport where page is rendered
-        var scale_required = _CANVAS.width / pdf_original_width;
+         var scale_required = _CANVAS.width / pdf_original_width;
     
         // get viewport to render the page at required scale
         var viewport = page.getViewport(scale_required);
@@ -151,6 +152,7 @@ function modulLoadPDF(url){
     function loadingPDF(){
         showPDF(''+url);
         go('#alltxtbox');
+       
     }
         
         loadingPDF();
