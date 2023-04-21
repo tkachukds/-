@@ -1,3 +1,19 @@
+html {
+    font-family: 'Open Sans';
+    font-size: 15px;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    padding:0; margin:0;
+}
+#PAGE {display: block;}
+.centred {text-align: center;}
+
+.styleBody {
+    background: #e8e8e84d;
+    padding:0; margin:0;
+}
+
 #clearButton {
     margin-top: 10px;
     background: e6eeee;
@@ -7,6 +23,89 @@
     left: 10px;
     }
 
-    #pageMenu {
+#pageMenu {
         margin-top:50px;
     }
+
+#Loaderbuttons {
+    width:60%;
+    margin:10px auto 5px;
+    display: inline-grid;
+    text-align: center;
+
+    left: auto;
+    right: 0;
+ 
+}
+
+
+#loaderButton{
+    border-radius: 4px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 16px;
+    display:block;
+background-color: #3498db;
+border-color: #3498db;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+    margin: 3px;
+    padding: 4px 12px;
+    }
+    
+    #loaderButton:hover {
+        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    }
+
+
+
+textarea {
+        height: 30px;
+        border-radius: 0;
+        border: 1px solid rgba(0,0,0,.08);
+        box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+        writing-mode: horizontal-tb !important;
+       
+        text-rendering: auto;
+        color: fieldtext;
+        letter-spacing: normal;
+        word-spacing: normal;
+        line-height: normal;
+        text-transform: none;
+        text-indent: 0px;
+        text-shadow: none;
+        display: inline-block;
+        text-align: start;
+        appearance: auto;
+        -webkit-rtl-ordering: logical;
+        cursor: text;
+        background-color: field;
+        margin: 0em;
+        padding: 1px 2px;
+        border-width: 2px;
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+        border-image: initial;
+    }
+
+    #pdf-contents {
+        width: 100%;
+    }
+
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+       }
+
+#search {
+        margin-top: 80px;
+        margin-left: 5%;
+        margin-right: 5%;
+            position: relative;
+            padding: 0;
+            text-align: center;
+        }
