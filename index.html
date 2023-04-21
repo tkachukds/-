@@ -5,11 +5,24 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstap.css">
     <link rel="stylesheet" href="css.css">
+   
     <link rel="stylesheet" href="cssModulPDF.css">
-  </head>
-  <body>
+ </head>
+  <body class="styleBody ">
+    <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
+<div class="container">
+ <a class="navbar-brand smooth-scroll logo" onclick="restartPage();">
+<img src="logo.png" style="max-height: 35px; padding-top: 15px;" alt="logo">
+</a></div>
+    </nav>
+</div><!-- конец шапки -->
+<div id="PAGE" class="centred">
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.228/pdf.min.js"></script>
+    <script src="jsonModul.js"></script>
     <script src="script.js"></script>
     <script src="procedures.js"></script>
     <script src="ModulLoadPDF.js"></script>
