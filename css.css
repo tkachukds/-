@@ -4,14 +4,18 @@ html {
     line-height: 1.15;
     width: 100%;
 }
-#PAGE {display: block;
-    width: 100%;
+#PAGE {
+    display: block;
+    width: 80%;
+
 }
 .centred {text-align: center;}
 
 .styleBody {
     background: #e8e8e84d;
     width: 100%;
+   padding-left: 10%;
+   padding-right: 10%;
 }
 
 #clearButton {

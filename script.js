@@ -12,7 +12,7 @@ EnterFunction();//подключаем функцию ввода текста (�
 //БАЗА 
 //
 //let baseArray = [];
-let baseArray = ["как сделать кассу/test.pdf", "собрать скуд/test.pdf", "сломался принтер/test.pdf", "переустановка windows/test.pdf", "убрать браунзер/test.pdf"];     
+let baseArray = ["нет процедур/test.pdf", "нет процедур/test.pdf", "нет процедур/test.pdf"];     
 //глобальные переменные
 let searchValue;
 let pageMenu = '<div id="pageMenu"></div>'+
@@ -161,7 +161,8 @@ let txtbox = document.createElement('textarea');
 txtbox.cols=150;//ширина
 txtbox.rows=rows; //вниз сколько - длмна
 txtbox.id=txt; //подключили айди
-txtbox.placeholder = "Еще не знаю ни одной инструкции. Ищу их...";
+txtbox.placeholder = "Ищу инструкции...";
+txtbox.disabled = true;
 //document.body.appendChild(txtbox)
 document.getElementById(id).appendChild(txtbox)
 }

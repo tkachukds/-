@@ -40,6 +40,7 @@ function loadGOOD(txt){
             return a('Сорь, но с Json что-то не так')}
     } else {
         editTXTAREAholder('Что найти? Я знаю - '+txt)
+        document.getElementById('search_engine').disabled=false;
         l('c json все ок. начинаю запуск импорта базы') 
         setTimeout(() => inputDATAinbasearr(txt), 1000);
     }
