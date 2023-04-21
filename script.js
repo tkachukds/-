@@ -161,7 +161,7 @@ let txtbox = document.createElement('textarea');
 txtbox.cols=150;//ширина
 txtbox.rows=rows; //вниз сколько - длмна
 txtbox.id=txt; //подключили айди
-txtbox.placeholder = "Какую процедуру нужно найти?...";
+txtbox.placeholder = "По я не знаю ни одной инструкции...";
 //document.body.appendChild(txtbox)
 document.getElementById(id).appendChild(txtbox)
 }
