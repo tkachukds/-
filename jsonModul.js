@@ -22,6 +22,7 @@ let DataKey=[];
 let DataBASEKey;
 let loaddata = [];
 function LOADarrKEY(txt){
+    l(''+txt)
 loaddata = dataJSON[txt];
 baseArray = loaddata;
 }
