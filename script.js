@@ -16,10 +16,10 @@ let baseArray = ["нет процедур/test.pdf", "нет процедур/te
 //глобальные переменные
 let searchValue;
 let pageMenu = '<div id="pageMenu"></div>'+
-'<div id="alltxtbox"></div> '+
 '<div id="buttons" ></div>'+
-'<div id="search"></div>'+
-'<div id="Loaderbuttons"></div>'+
+// '<div id="search"></div>'+
+
+'<div id="alltxtbox"></div> '+
 // '<input id="clearButton" type="button" class="clear" value="С" onclick="restartPage();" />'+
 '<div id="adminpanel"></div> </div>';
 //ФУНКЦИИ ДВИЖКА 
@@ -122,7 +122,7 @@ function CreateLoaderButton(id,namebutt,url){
     // new_button.class = "buttonINSTRUCTION";
     new_button.addEventListener('click', () => {
     FilterLoadFILE(url);//загрузка страницы инструкций
-    // go('#alltxtbox');
+    clearLoaderButtons(); //удаляем кнопки
   })
   document.querySelector('#Loaderbuttons').appendChild(new_button)//создать кнопку в определенном месте (в айди баттон)
   l('кнопка создана '+namebutt)
@@ -159,7 +159,6 @@ function createFindtxtbox(txt,id, rows)//создать новый текстб�
 {
 let txtbox = document.createElement('textarea');
 txtbox.cols=150;//ширина
-txtbox.rows=rows; //вниз сколько - длмна
 txtbox.id=txt; //подключили айди
 txtbox.placeholder = "Ищу инструкции...";
 txtbox.disabled = true;
