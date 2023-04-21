@@ -1,14 +1,12 @@
 window.onload = function() {
-clearBODY();//чистка страницы, все что выше - будет стерто, а также добавит нужные div
-createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
+loadITbasedata();//загрузить инструкции для IT
 // loadADMINbasedata(); //загрузимь иснтрукции для АДМИНов
 // loadCASHIERbasedata(); //загрузить иснтрукции для КАССИР
-loadITbasedata();//загрузить иснтрукции для IT
 //  LOADarrKEY("Инструкции IT-шников");  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"
+clearBODY();//добавляет нужные нам DIV для работы
+createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
 EnterFunction();//подключаем функцию ввода текста (поиск при вводе)
-
 //CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
-
 //FindingNow();// загрузить все кнопки из базы
 }
 //БАЗА 
