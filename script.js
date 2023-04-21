@@ -16,11 +16,11 @@ let baseArray = ["как сделать кассу/test.pdf", "собрать с
 //глобальные переменные
 let searchValue;
 let pageMenu = '<div id="pageMenu"></div>'+
-'<div id="search"><div id="Loaderbuttons"></div></div>'+
-'<p>'+
-'<div id="buttons" ></div>'+
-// '<input id="clearButton" type="button" class="clear" value="С" onclick="restartPage();" />'+
 '<div id="alltxtbox"></div> '+
+'<div id="buttons" ></div>'+
+'<div id="search"></div>'+
+'<div id="Loaderbuttons"></div>'+
+// '<input id="clearButton" type="button" class="clear" value="С" onclick="restartPage();" />'+
 '<div id="adminpanel"></div> </div>';
 //ФУНКЦИИ ДВИЖКА 
 function clearLoaderButtons(){
