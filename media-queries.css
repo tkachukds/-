@@ -1,5 +1,5 @@
 /************************************************************************************
-smaller than 980
+smaller than 980//iPAD
 *************************************************************************************/
 @media screen and (max-width: 980px) {
 
@@ -30,6 +30,7 @@ smaller than 980
 	}
 
 	#search {
+		max-width: 80%;
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
@@ -37,13 +38,11 @@ smaller than 980
 			}
 
 	#search_engine {
-				width: 100%;
-				font-size: 20px;
-			}
-
+				font-size: 27px;
+	}
 	#Loaderbuttons {
 	
-		width: 80%;
+		width: 90%;
 		display: inline-block;
 				margin-left: auto;
 				margin-right: auto;
@@ -51,82 +50,18 @@ smaller than 980
 			}
 
 	#loaderButton{
-		margin-right: 1px;
-		margin-top: 0px;
+		margin-right: 4px;
+		margin-top: 5px;
 		min-width: 48%;
-			font-size: 14px;
+			font-size: 20px;
 			color: 	#1C1C1C;
-			font-family: Arial Unicode MS, sans-serif;
-			border: 1px solid 	#363636;
+			border: 1px solid 	#ffffff;
 
 	}
 }
 
 /************************************************************************************
-smaller than 650
-*************************************************************************************/
-@media screen and (max-width: 650px) {
-
-	#alltxtbox {
-		margin-left: auto;
-		margin-right: auto;
-		padding-top: 50px;
-		width: 100%;
-	}
-
-	.header {
-		width: 100%;
-		position: fixed;
-			top: 0%;
-			background-color: #e8e8e84d;
-			margin-left: auto;
-			margin-right: auto;
-			display: grid;
-			text-align: center;
-		   }
-	
-
-	.logo {
-		z-index: -2;
-		top: -5px;
-		margin-left: auto;
-		margin-right: auto;
-		position: relative;
-	}
-
-	#search {
-		text-align: center;
-		width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-			}
-
-	#search_engine {
-				width: 100%;
-				font-size: 20px;
-			}
-
-	#Loaderbuttons {
-		text-align: center;
-		display: inline-table;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-	#loaderButton{
-		min-width: 100%;
-			font-size: 14px;
-			color: 	#1C1C1C;
-			font-family: Arial Unicode MS, sans-serif;
-			border: 3px solid 	#363636;
-			margin-left: auto;
-			margin-right: auto;
-	}
-
-}
-
-/************************************************************************************
-smaller than 560
+smaller than 560//iPhone SE
 *************************************************************************************/
 @media screen and (max-width: 480px) {
 
@@ -157,15 +92,16 @@ smaller than 560
 	}
 
 	#search {
+		max-width: 80%;
 		width: 80%;
 		margin-left: auto;
 		margin-right: auto;
 			}
 
-	#search_engine {
-				width: 100%;
-				font-size: 20px;
-			}
+			#search_engine {
+				font-size: 27px;
+	}
+
 
 	#Loaderbuttons {
 		display: inline-table;
@@ -173,15 +109,14 @@ smaller than 560
 				margin-right: auto;
 			}
 
-	#loaderButton{
-		min-width: 100%;
-			font-size: 14px;
-			color: 	#1C1C1C;
-			font-family: Arial Unicode MS, sans-serif;
-			border: 3px solid 	#363636;
-			margin-left: auto;
-			margin-right: auto;
-	}
+			#loaderButton{
+				min-width: 100%;
+					font-size: 14px;
+					color: 	#1C1C1C;
+					border: 1px solid 	#ffffff;
+					margin-left: auto;
+					margin-right: auto;
+			}
 
 }
 
