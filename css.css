@@ -6,7 +6,7 @@ html {
 }
 #PAGE {
     display: block;
-    width: 80%;
+    width: 100%;
 
 }
 .centred {text-align: center;}
@@ -14,8 +14,6 @@ html {
 .styleBody {
     background: #e8e8e84d;
     width: 100%;
-   padding-left: 10%;
-   padding-right: 10%;
 }
 
 #clearButton {
@@ -32,33 +30,27 @@ html {
     }
 
 #Loaderbuttons {
-    width:60%;
-    margin:10px auto 5px;
-    display: block;
-    text-align: center;
-    left: auto;
-    right: 0;
+    width: 90%;
+    position: relative;
+left: 0%;
 }
 
 
 #loaderButton{
     border-radius: 4px;
-    margin: 20px auto;
-    text-align: center;
     font-size: 14px;
-    padding: 8px 16px;
-background-color: #3498db;
-border-color: #3498db;
+background-color:rgb(97, 154, 56);
+border-color: rgb(97, 154, 56);
   color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  box-shadow: 0 0 40px 40px rgb(97, 154, 56) inset, 0 0 0 0 #rgb(97, 154, 56);
     margin: 3px;
     padding: 4px 12px;
+    width: auto;
+    height: auto;
     }
     
-    #loaderButton:hover {
-        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+#loaderButton:hover {
+        box-shadow: 0 0 10px 0 rgb(97, 154, 56) inset, 0 0 10px 4px rgb(97, 154, 56);
     }
 
 
@@ -105,19 +97,17 @@ textarea {
     }
 
 .header {
-    padding-left: 2%;
+    min-height: 45px;
+    width: 100%;
     position: fixed;
-        left: 0;
-        top: 0;
-        padding-left: 40px;
-        padding-right: 40px;
+        top: 0%;
+        background-color: #17263D;
        }
 
 #search {
-    padding-top: 15px;
-        float: right;
-            text-align: center;
-            padding-left: 10px;
+    min-height: 45px;
+    padding-left:10%;
+    width: 80%;
         }
 
 #search_engine {
@@ -126,11 +116,18 @@ textarea {
 }
 
 .logo {
+    left: 30px;    ;
+    position: absolute;
     z-index: 2;
-
+    top: -5px;
+    float: left;
 }
 
 #alltxtbox {
     padding-top: 100px;
     width: 100%;
+}
+
+body {
+    margin: 0;
 }

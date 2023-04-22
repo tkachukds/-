@@ -39,7 +39,7 @@ function loadGOOD(txt){
             editTXTAREAholder('Что-то не так с базой данных...не могу ее загрузить')
             return a('Сорь, но с Json что-то не так')}
     } else {
-        editTXTAREAholder('Что найти? Я знаю - '+txt)
+        editTXTAREAholder(''+txt)
         document.getElementById('search_engine').disabled=false;
         l('c json все ок. начинаю запуск импорта базы') 
         setTimeout(() => inputDATAinbasearr(txt), 1000);
