@@ -1,18 +1,21 @@
 html {
     line-height: 1.15;
     width: 100%;
+    font-family: system-ui;
 }
-#PAGE {
-    display: block;
-    width: 100%;
-
-}
-.centred {text-align: center;}
 
 .styleBody {
     background: #e8e8e84d;
     width: 100%;
 }
+
+#PAGE {
+    display: block;
+    width: 100%;
+
+}
+
+.centred {text-align: center;}
 
 #clearButton {
     margin-top: 10px;
@@ -90,6 +93,10 @@ textarea {
     max-height: 45px;
     width: 100%;
     font-size: 26px;
+}
+
+#search_engine::placeholder {
+    color: rgba(168, 168, 168, 0.514);
 }
 
 #Loaderbuttons {

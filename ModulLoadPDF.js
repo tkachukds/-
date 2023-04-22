@@ -151,7 +151,7 @@ function modulLoadPDF(url){
     
     function loadingPDF(){
         showPDF(''+url);
-        go('#alltxtbox');
+       // go('#alltxtbox');
        
     }
         
