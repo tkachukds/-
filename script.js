@@ -21,6 +21,9 @@ let pageMenu = ''+
 '<div id="alltxtbox"></div> '+
 '<div id="adminpanel"></div> </div>';
 //ФУНКЦИИ ДВИЖКА 
+function goPAGE(txt) {window.location.href=''+txt;}
+function goID(txt) {document.getElementById(txt).scrollIntoView();}
+
 function clearLoaderButtons(){
     document.getElementById('Loaderbuttons').innerHTML='';
 }
@@ -124,7 +127,7 @@ function CreateLoaderButton(id,namebutt,url){
   l('кнопка создана '+namebutt)
                                          }
 
-function go(txt) {  window.location.href=''+txt;}
+
 
 function clearBODY(){// добавляет нужные нам DIV для работы
 document.getElementById('PAGE').innerHTML = pageMenu; }
