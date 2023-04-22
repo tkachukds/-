@@ -127,31 +127,33 @@ function modulLoadPDF(url){
     document.querySelector("#pdf-prev2").addEventListener('click', function() {
         if(_CURRENT_PAGE != 1)
             showPage(--_CURRENT_PAGE);
-            document.getElementById('pdf-main-container').scrollIntoView();
+            goID('alltxtbox'); // document.getElementById('pdf-main-container').scrollIntoView();
     });
     
     // click on the "Next" page button
     document.querySelector("#pdf-next2").addEventListener('click', function() {
         if(_CURRENT_PAGE != _TOTAL_PAGES)
             showPage(++_CURRENT_PAGE);
-            document.getElementById('pdf-main-container').scrollIntoView();
+            goID('alltxtbox'); // document.getElementById('pdf-main-container').scrollIntoView();
     });
     
     // click on the "Previous" page button
     document.querySelector("#pdf-prev").addEventListener('click', function() {
         if(_CURRENT_PAGE != 1)
             showPage(--_CURRENT_PAGE);
+            goID('alltxtbox');
     });
     
     // click on the "Next" page button
     document.querySelector("#pdf-next").addEventListener('click', function() {
         if(_CURRENT_PAGE != _TOTAL_PAGES)
             showPage(++_CURRENT_PAGE);
+            goID('alltxtbox');
     });
     
     function loadingPDF(){
         showPDF(''+url);
-        go('#alltxtbox');
+      goID('alltxtbox');
        
     }
         

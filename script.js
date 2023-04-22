@@ -3,7 +3,7 @@ loadITbasedata();//загрузить инструкции для IT
 // loadADMINbasedata(); //загрузимь иснтрукции для АДМИНов
 // loadCASHIERbasedata(); //загрузить иснтрукции для КАССИР
 //  LOADarrKEY("Инструкции IT-шников");  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"
-clearBODY();//добавляет нужные нам DIV для работы
+//clearBODY();//добавляет нужные нам DIV для работы
 createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
 EnterFunction();//подключаем функцию ввода текста (поиск при вводе)
 //CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
@@ -12,17 +12,18 @@ EnterFunction();//подключаем функцию ввода текста (�
 //БАЗА 
 //
 //let baseArray = [];
-let baseArray = ["как сделать кассу/test.pdf", "собрать скуд/test.pdf", "сломался принтер/test.pdf", "переустановка windows/test.pdf", "убрать браунзер/test.pdf"];     
+let baseArray = ["нет процедур/test.pdf", "нет процедур/test.pdf", "нет процедур/test.pdf"];     
 //глобальные переменные
 let searchValue;
-let pageMenu = '<div id="pageMenu"></div>'+
-'<div id="alltxtbox"></div> '+
+let pageMenu = ''+
+'<div id="pageMenu"></div>'+
 '<div id="buttons" ></div>'+
-'<div id="search"></div>'+
-'<div id="Loaderbuttons"></div>'+
-// '<input id="clearButton" type="button" class="clear" value="С" onclick="restartPage();" />'+
+'<div id="alltxtbox"></div> '+
 '<div id="adminpanel"></div> </div>';
 //ФУНКЦИИ ДВИЖКА 
+function goPAGE(txt) {window.location.href=''+txt;}
+function goID(txt) {document.getElementById(txt).scrollIntoView();}
+
 function clearLoaderButtons(){
     document.getElementById('Loaderbuttons').innerHTML='';
 }
@@ -90,7 +91,6 @@ function CreateNewButton(id,namebutt,url){//создать новую кнопк
     new_button.style = '';
     new_button.addEventListener('click', () => {
     //какие фукнкции исполняет кнопка при нажатии 
-    clearBODY();//чистка div PAGE
     FilterLoadFILE(url);//загрузка страницы инструкций
   })
   document.querySelector('#buttons').appendChild(new_button)//создать кнопку в определенном месте (в айди баттон)
@@ -118,19 +118,18 @@ function CreateLoaderButton(id,namebutt,url){
    new_button.innerText = namebutt
     // добавляем айди кнопки
     new_button.id = id;
-    
     // new_button.class = "buttonINSTRUCTION";
     new_button.addEventListener('click', () => {
     FilterLoadFILE(url);//загрузка страницы инструкций
-    // go('#alltxtbox');
+    clearLoaderButtons(); //удаляем кнопки
   })
   document.querySelector('#Loaderbuttons').appendChild(new_button)//создать кнопку в определенном месте (в айди баттон)
   l('кнопка создана '+namebutt)
                                          }
 
-function go(txt) {  window.location.href=''+txt;}
 
-function clearBODY(){// очистить страницу
+
+function clearBODY(){// добавляет нужные нам DIV для работы
 document.getElementById('PAGE').innerHTML = pageMenu; }
 //create_new_object('id создаваемого объекта','id куда добавить элемент', 'ширина', 'длина вниз', 'какой элемент - div или canvas')
 function create_new_object(newid,id, width, height, element )//создать новый 
@@ -159,9 +158,9 @@ function createFindtxtbox(txt,id, rows)//создать новый текстб�
 {
 let txtbox = document.createElement('textarea');
 txtbox.cols=150;//ширина
-txtbox.rows=rows; //вниз сколько - длмна
 txtbox.id=txt; //подключили айди
-txtbox.placeholder = "Еще не знаю ни одной инструкции. Ищу их...";
+txtbox.placeholder = "Просыпаюсь...";
+txtbox.disabled = true;
 //document.body.appendChild(txtbox)
 document.getElementById(id).appendChild(txtbox)
 }

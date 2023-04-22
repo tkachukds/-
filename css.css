@@ -1,18 +1,21 @@
 html {
-    font-family: 'Open Sans';
-    font-size: 15px;
     line-height: 1.15;
     width: 100%;
+    font-family: system-ui;
 }
-#PAGE {display: block;
-    width: 100%;
-}
-.centred {text-align: center;}
 
 .styleBody {
     background: #e8e8e84d;
     width: 100%;
 }
+
+#PAGE {
+    display: block;
+    width: 100%;
+
+}
+
+.centred {text-align: center;}
 
 #clearButton {
     margin-top: 10px;
@@ -27,43 +30,8 @@ html {
         margin-top:50px;
     }
 
-#Loaderbuttons {
-    width:60%;
-    margin:10px auto 5px;
-    display: contents;
-    text-align: center;
-    left: auto;
-    right: 0;
-}
-
-
-#loaderButton{
-    border-radius: 4px;
-    margin: 20px auto;
-    text-align: center;
-    font-size: 14px;
-    padding: 8px 16px;
-background-color: #3498db;
-border-color: #3498db;
-  color: #fff;
-  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
-    margin: 3px;
-    padding: 4px 12px;
-    }
-    
-    #loaderButton:hover {
-        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-    }
-
-
-
 textarea {
-        height: 30px;
-        border-radius: 0;
-        border: 1px solid rgba(0,0,0,.08);
-        box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    width: 100%;
         writing-mode: horizontal-tb !important;
         text-rendering: auto;
         color: fieldtext;
@@ -73,7 +41,6 @@ textarea {
         text-transform: none;
         text-indent: 0px;
         text-shadow: none;
-        display: inline-block;
         text-align: start;
         appearance: auto;
         -webkit-rtl-ordering: logical;
@@ -85,6 +52,12 @@ textarea {
         border-style: inset;
         border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
         border-image: initial;
+        border-radius: 0;
+        border: 1px solid rgba(0,0,0,.08);
+        box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+        min-width: 50%;
+        min-height: 50%;
+        max-width: 100%;
     }
 
 #pdf-main-container {
@@ -98,32 +71,74 @@ textarea {
 #pdf-contents {
         width: 100%;
     }
-
+    
 .header {
-    padding-left: 2%;
-        position: fixed;
-        left: 0;
-        top: 0;
+    min-height: 45px;
+    width: 100%;
+    position: fixed;
+        top: 0%;
+        background-color: #e8e8e84d;
+        margin-left: auto;
+        margin-right: auto;
        }
 
 #search {
-        margin-top: 80px;
-        margin-left: 5%;
-        margin-right: 5%;
-            position: relative;
-            padding: 0;
-            text-align: center;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
         }
 
 #search_engine {
+    max-width: 100%;
+    max-height: 45px;
     width: 100%;
-    font-size: 20px;
+    font-size: 26px;
+}
+
+#search_engine::placeholder {
+    color: rgba(168, 168, 168, 0.514);
+}
+
+#Loaderbuttons {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#loaderButton{
+    font-size: 16px;
+    min-width: 300px;
+    max-width: 300px;
+    color: 	#1C1C1C;
+    border: 1px solid 	#ffffff;
+    outline:  1px solid #828282;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-right: 10px;
+    text-align: center;
+        }
+
+        #loaderButton:hover {
+            outline:  3px solid #525252;
+            }
+
+#alltxtbox {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    width: 50%;
 }
 
 .logo {
-    z-index: 2;
+    padding-left: 1%;
+    position: absolute;
+    z-index: -2;
+    top: -5px;
+    float: left;
 }
 
-#alltxtbox {
-    width: 100%;
+
+body {
+    margin: 0;
 }
