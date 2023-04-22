@@ -160,7 +160,7 @@ function createFindtxtbox(txt,id, rows)//создать новый текстб�
 let txtbox = document.createElement('textarea');
 txtbox.cols=150;//ширина
 txtbox.id=txt; //подключили айди
-txtbox.placeholder = "Ищу инструкции...";
+txtbox.placeholder = "Просыпаюсь...";
 txtbox.disabled = true;
 //document.body.appendChild(txtbox)
 document.getElementById(id).appendChild(txtbox)

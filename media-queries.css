@@ -38,8 +38,15 @@ smaller than 980//iPAD
 			}
 
 	#search_engine {
-				font-size: 27px;
+		max-width: 600px;
+		min-height: 20px;
+		min-width: 70%;
+		height: 35px;
+		font-size: 27px;
 	}
+
+
+
 	#Loaderbuttons {
 	
 		width: 90%;
