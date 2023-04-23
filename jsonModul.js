@@ -23,6 +23,25 @@ let DataKey=[];
 let DataBASEKey;
 let loaddata = [];
 
+function textareaNOEnter(id){
+    if (document.getElementById(id) !== null) {
+        l("проверил элемент по id - " +id+ " он есть");
+        document.getElementById(id).disabled=true;
+    }
+    else {
+        alert("ВНИМАНИЕ. Элемента(id) - " +id+ " не найдено");
+    }
+}
+
+function textareaOKEnter(id){
+    if (document.getElementById(id) !== null) {
+        l("проверил элемент по id - " +id+ " он есть");
+        document.getElementById(id).disabled=false;
+    }
+    else {
+        alert("ВНИМАНИЕ. Элемента(id) - " +id+ " не найдено");
+    }
+    }
 
 function LOADarrKEY(txt){
     loadingJsonFile();//загрузка файла JSON в dataJSON
@@ -30,6 +49,7 @@ function LOADarrKEY(txt){
 }
 
 function loadGOOD(txt){
+    textareaNOEnter('search_engine');
     editTXTAREAholder('Загрузка базы данных...')
     if (dataJSON === undefined){
         l('не успевает загрузиться json, или с ним что-то не так') 
@@ -39,7 +59,7 @@ function loadGOOD(txt){
             editTXTAREAholder('Что-то не так с базой данных...не могу ее загрузить')
             return a('Сорь, но с Json что-то не так')}
     } else {
-        document.getElementById('search_engine').disabled=false;
+        textareaOKEnter('search_engine');        //document.getElementById('search_engine').disabled=false;
         l('c json все ок. начинаю запуск импорта базы');
         setTimeout(() => inputDATAinbasearr(txt), 1000);
     }

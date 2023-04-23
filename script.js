@@ -101,18 +101,25 @@ function CreateNewButton(id,namebutt,url){//создать новую кнопк
 function FilterLoadFILE(idProcedur){
  // a(idProcedur) //какой файл видит?
     let FileFormat;
+    let NameFile;
   FileFormat = idProcedur.split('/');
    FileFormat = idProcedur.split('.');//разделим на название и формат файла ([test, pdf])
+   NameFile = FileFormat[0];
    FileFormat = FileFormat[1].toLowerCase();//выбирем расширение и делаем все буквы маленькими
    FileFormat = FileFormat.replace(/\s/g, "");//уберем все пробелы
     l('Определен формат - '+FileFormat)
-   if (FileFormat == 'pdf'){
+
+   if (FileFormat === 'pdf'){
        l("включается функция загрузки PDF")
        loadPDFFile(idProcedur);
-   }
-    else {a('я не умею работать с форматом - '+FileFormat+'. Пожалуйста, обратитесь к Ткачуку Денису (создателю программы)')}
-   
-   }
+   } else if (FileFormat === 'category'){
+    l("загружаю КАТЕГОРИЮ - "+NameFile);
+    textareaNOEnter('search_engine');
+    LOADarrKEY(NameFile);
+} else {
+a('я не умею работать с форматом - '+FileFormat+'. Пожалуйста, обратитесь к Ткачуку Денису (создателю программы)')
+}   
+                                   }
 
 function CreateLoaderButton(id,namebutt,url){
   let new_button = document.createElement('button')
