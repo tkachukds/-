@@ -1,17 +1,16 @@
 window.onload = function() {
-
-// loadADMINbasedata(); //загрузимь иснтрукции для АДМИНов
-// loadCASHIERbasedata(); //загрузить иснтрукции для КАССИР
-//  LOADarrKEY("Инструкции IT-шников");  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"
-//clearBODY();//добавляет нужные нам DIV для работы
 //CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
-loadITbasedata();//загрузить инструкции для IT
+//loadITbasedata();//загрузить инструкции для IT
+startload();
 createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
 EnterFunction();//подключаем функцию ввода текста (поиск при вводе)
 }
+// с какой категории начать загрузку?
+let starCATEGORY = "КАТЕГОРИИ";       //что грузим при запуске прошки?
+function startload(){
+LOADarrKEY(starCATEGORY);  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"  
+}
 //БАЗА 
-//
-//let baseArray = [];
 let baseArray = ["нет процедур/test.pdf", "нет процедур/test.pdf", "нет процедур/test.pdf"];     
 //глобальные переменные
 let searchValue;
