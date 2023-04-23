@@ -2,22 +2,22 @@ function modulLoadPDF(url){
 
     let htmlcanvasPDF = ''+
         '<button id="show-pdf-button" style="display: none;">Show PDF</button>'+
-        '<div id="pdf-main-container" width="100%">'+
+          '<div id="pdf-main-container" width="100%">'+
         '<div id="pdf-loader">Loading document ...</div>'+
-        '<div id="pdf-contents">'+
-        '<div id="pdf-meta">'+
-        '<div id="pdf-buttons">'+
+        '<div id="pdf-contents"></div>'+
+        '<div id="pdf-meta"></div>'+
+        '<div id="pdf-buttons"></div>'+
         '<button id="pdf-prev">Предыдущая</button>'+
         '<button id="pdf-next">Следующая страница</button>'+
-        '</div>'+
-        '<div id="page-count-container">Страница <div id="pdf-current-page"></div> из <div id="pdf-total-pages"></div></div>'+
-        '</div>'+
+          '</div>'+
+          '<div id="page-count-container">Страница <div id="pdf-current-page"></div> из <div id="pdf-total-pages"></div></div>'+
+        // '</div>'+
         '<canvas id="pdf-canvas" width="900"></canvas>'+
         '<div id="page-loader" style="display: none;">Loading page ...</div>'+
         '<button id="pdf-prev2">Предыдущая</button>'+
-        '<button id="pdf-next2">Следующая страница</button>'+
-        '</div>'+
-        '</div>';
+        '<button id="pdf-next2">Следующая страница</button>';
+        // '</div>'+
+        //   '</div>';
     
     document.getElementById("alltxtbox").innerHTML = htmlcanvasPDF;
     
@@ -152,9 +152,9 @@ function modulLoadPDF(url){
     });
     
     function loadingPDF(){
-        showPDF(''+url);
-      goID('alltxtbox');
-       
+    showPDF(''+url);
+    goID('alltxtbox');
+
     }
         
         loadingPDF();
