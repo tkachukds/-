@@ -45,7 +45,7 @@ function textareaOKEnter(id){
 
 function LOADarrKEY(txt){
     loadingJsonFile();//загрузка файла JSON в dataJSON
-    setTimeout(() => loadGOOD(txt), 2000);
+    setTimeout(() => loadGOOD(txt), 1000);
 }
 
 function loadGOOD(txt){
