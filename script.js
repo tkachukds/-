@@ -1,13 +1,13 @@
 window.onload = function() {
-loadITbasedata();//загрузить инструкции для IT
+
 // loadADMINbasedata(); //загрузимь иснтрукции для АДМИНов
 // loadCASHIERbasedata(); //загрузить иснтрукции для КАССИР
 //  LOADarrKEY("Инструкции IT-шников");  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"
 //clearBODY();//добавляет нужные нам DIV для работы
+//CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
+loadITbasedata();//загрузить инструкции для IT
 createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
 EnterFunction();//подключаем функцию ввода текста (поиск при вводе)
-//CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
-//FindingNow();// загрузить все кнопки из базы
 }
 //БАЗА 
 //
