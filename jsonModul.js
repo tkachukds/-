@@ -23,14 +23,34 @@ let DataKey=[];
 let DataBASEKey;
 let loaddata = [];
 
+function textareaNOEnter(id){
+    if (document.getElementById(id) !== null) {
+        l("проверил элемент по id - " +id+ " он есть");
+        document.getElementById(id).disabled=true;
+    }
+    else {
+        alert("ВНИМАНИЕ. Элемента(id) - " +id+ " не найдено");
+    }
+}
+
+function textareaOKEnter(id){
+    if (document.getElementById(id) !== null) {
+        l("проверил элемент по id - " +id+ " он есть");
+        document.getElementById(id).disabled=false;
+    }
+    else {
+        alert("ВНИМАНИЕ. Элемента(id) - " +id+ " не найдено");
+    }
+    }
 
 function LOADarrKEY(txt){
     loadingJsonFile();//загрузка файла JSON в dataJSON
-    setTimeout(() => loadGOOD(txt), 2000);
+    setTimeout(() => loadGOOD(txt), 1000);
 }
 
 function loadGOOD(txt){
-    editTXTAREAholder('Загрузка базы данных...')
+    editTXTAREAholder('Загрузка базы данных...');
+    textareaNOEnter('search_engine');
     if (dataJSON === undefined){
         l('не успевает загрузиться json, или с ним что-то не так') 
         loadingJsonFile();//загрузка файла JSON в dataJSON
@@ -39,7 +59,7 @@ function loadGOOD(txt){
             editTXTAREAholder('Что-то не так с базой данных...не могу ее загрузить')
             return a('Сорь, но с Json что-то не так')}
     } else {
-        document.getElementById('search_engine').disabled=false;
+        textareaOKEnter('search_engine');        //document.getElementById('search_engine').disabled=false;
         l('c json все ок. начинаю запуск импорта базы');
         setTimeout(() => inputDATAinbasearr(txt), 1000);
     }
