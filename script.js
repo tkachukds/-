@@ -138,7 +138,8 @@ function CreateLoaderButton(id,namebutt,url){
 
 
 function clearBODY(){// добавляет нужные нам DIV для работы
-document.getElementById('PAGE').innerHTML = pageMenu; }
+//document.getElementById('PAGE').innerHTML = pageMenu;
+ }
 //create_new_object('id создаваемого объекта','id куда добавить элемент', 'ширина', 'длина вниз', 'какой элемент - div или canvas')
 function create_new_object(newid,id, width, height, element )//создать новый 
 {

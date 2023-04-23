@@ -49,8 +49,8 @@ function LOADarrKEY(txt){
 }
 
 function loadGOOD(txt){
-    editTXTAREAholder('Загрузка базы данных...');
     textareaNOEnter('search_engine');
+    editTXTAREAholder('Загрузка базы данных...');
     if (dataJSON === undefined){
         l('не успевает загрузиться json, или с ним что-то не так') 
         loadingJsonFile();//загрузка файла JSON в dataJSON
