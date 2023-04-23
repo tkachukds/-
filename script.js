@@ -121,6 +121,13 @@ a('я не умею работать с форматом - '+FileFormat+'. По�
 }   
                                    }
 
+//загрузить инструкцию в текст бокс
+function loadPDFFile(idProcedur){
+  let UrlFileProcedure ='src/'+idProcedur;
+   modulLoadPDF(UrlFileProcedure);
+   
+  }
+
 function CreateLoaderButton(id,namebutt,url){
   let new_button = document.createElement('button')
    // добавляем название кнопки
