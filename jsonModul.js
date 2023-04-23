@@ -30,7 +30,7 @@ function LOADarrKEY(txt){
 }
 
 function loadGOOD(txt){
-    editTXTAREAholder('загрузка базы данных')
+    editTXTAREAholder('Загрузка базы данных...')
     if (dataJSON === undefined){
         l('не успевает загрузиться json, или с ним что-то не так') 
         loadingJsonFile();//загрузка файла JSON в dataJSON
@@ -39,15 +39,16 @@ function loadGOOD(txt){
             editTXTAREAholder('Что-то не так с базой данных...не могу ее загрузить')
             return a('Сорь, но с Json что-то не так')}
     } else {
-        editTXTAREAholder(''+txt)
         document.getElementById('search_engine').disabled=false;
-        l('c json все ок. начинаю запуск импорта базы') 
+        l('c json все ок. начинаю запуск импорта базы');
         setTimeout(() => inputDATAinbasearr(txt), 1000);
     }
 }
 function inputDATAinbasearr(txt){
 loaddata = dataJSON[txt];
 baseArray = loaddata;
+editTXTAREAholder(''+txt)
+FindingNow();// вывести все инструкции(показать кнопки) из базы
 }
 
 function editTXTAREAholder(txt){ 

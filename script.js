@@ -1,13 +1,13 @@
 window.onload = function() {
-loadITbasedata();//загрузить инструкции для IT
+
 // loadADMINbasedata(); //загрузимь иснтрукции для АДМИНов
 // loadCASHIERbasedata(); //загрузить иснтрукции для КАССИР
 //  LOADarrKEY("Инструкции IT-шников");  //загрузить данные под названием БАЗЫ. примере база - "Инструкции IT-шников"
 //clearBODY();//добавляет нужные нам DIV для работы
+//CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
+loadITbasedata();//загрузить инструкции для IT
 createFindtxtbox('search_engine','search', '1') // создадим поисковую строку
 EnterFunction();//подключаем функцию ввода текста (поиск при вводе)
-//CreateButtonsFromArrayBase();//создаем кнопки из переменной baseArray
-//FindingNow();// загрузить все кнопки из базы
 }
 //БАЗА 
 //
@@ -34,7 +34,7 @@ function Find(txt){
     }
     let arrFindtxt = baseArray;
     arrFindtxt.filter(word => word.match(new RegExp(notTogether(txt), "s"))).forEach(e => { console.log('найден запрос -'+e);
-    let ValueForButtons = e.split('/');
+    let ValueForButtons = e.split('//');//разделяем название кнопки и название файла
     l(ValueForButtons);
     CreateLoaderButton('loaderButton', ValueForButtons[0],ValueForButtons[1])
 }); //создание кнопок поика
@@ -99,7 +99,9 @@ function CreateNewButton(id,namebutt,url){//создать новую кнопк
 
 //что делать при переходе в процедурную 
 function FilterLoadFILE(idProcedur){
+ // a(idProcedur) //какой файл видит?
     let FileFormat;
+  FileFormat = idProcedur.split('/');
    FileFormat = idProcedur.split('.');//разделим на название и формат файла ([test, pdf])
    FileFormat = FileFormat[1].toLowerCase();//выбирем расширение и делаем все буквы маленькими
    FileFormat = FileFormat.replace(/\s/g, "");//уберем все пробелы
