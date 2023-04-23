@@ -20,6 +20,7 @@ let pageMenu = ''+
 '<div id="alltxtbox"></div> '+
 '<div id="adminpanel"></div> </div>';
 //ФУНКЦИИ ДВИЖКА 
+function clearTxtfromSearch(){document.getElementById('search_engine').value='';}
 function goPAGE(txt) {window.location.href=''+txt;}
 function goID(txt) {document.getElementById(txt).scrollIntoView();}
 
@@ -130,6 +131,7 @@ function CreateLoaderButton(id,namebutt,url){
     new_button.addEventListener('click', () => {
     FilterLoadFILE(url);//загрузка страницы инструкций
     clearLoaderButtons(); //удаляем кнопки
+    clearTxtfromSearch(); // удаляем введенный текст из поисковика
   })
   document.querySelector('#Loaderbuttons').appendChild(new_button)//создать кнопку в определенном месте (в айди баттон)
   l('кнопка создана '+namebutt)
