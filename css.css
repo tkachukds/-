@@ -73,6 +73,7 @@ textarea {
     }
     
 .header {
+    font-size: 16px;
     min-height: 45px;
     width: 100%;
     position: fixed;
